@@ -60,7 +60,7 @@ class GWMTabBarController: UITabBarController , GWMTabBarDelegate{
         self.firstVC=firstVC1;
         
         let secondVC1 = GWMSecondController()
-        secondVC1.tabBarItem.badgeValue=""
+        secondVC1.tabBarItem.badgeValue="13"
         self.setUpChildViewController(childVC: secondVC1, title: "Second", imageName: "school_tab", selectedImageName: "school_tab_sel")
         self.secondVC=secondVC1;
         
