@@ -12,14 +12,7 @@ class GWMBadgeButton: UIButton {
 
     var badgeValue:String!
     
-    var badge: String?{
-        set{
-            badgeValue = newValue as String!
-        }
-        get{
-            return badgeValue as String!
-        }
-    }
+    
     
     //重写方法
     override init(frame: CGRect) {

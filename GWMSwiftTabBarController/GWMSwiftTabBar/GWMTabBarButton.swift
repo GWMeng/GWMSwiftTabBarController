@@ -11,7 +11,7 @@ import UIKit
 class GWMTabBarButton: UIButton {
 
     var item = UITabBarItem()
-    var badgeButton = GWMBadgeButton.init(frame: CGRect.zero)
+    var badgeButton = GWMBadgeButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,7 @@ class GWMTabBarButton: UIButton {
 
         
         //数字提醒
-        let badgeBtn = GWMBadgeButton.init(frame: CGRect.zero)
+        let badgeBtn = GWMBadgeButton()
         var arm1 = UIViewAutoresizing()
         arm1.formUnion(UIViewAutoresizing.flexibleLeftMargin)
         arm1.formUnion(UIViewAutoresizing.flexibleBottomMargin)
@@ -73,7 +73,7 @@ class GWMTabBarButton: UIButton {
         self.setTitle(self.item.title, for: UIControlState.selected)
         self.setImage(self.item.image, for: UIControlState.normal)
         self.setImage(self.item.selectedImage, for: UIControlState.selected)
-        badgeButton.badgeValue = item.badgeValue as String!
+        badgeButton.setBadgeValue(badge: item.badgeValue as NSString!)
         let Y:CGFloat = 5.0;
         let bolder:CGFloat = 10.0
         let X:CGFloat = self.frame.size.width - self.badgeButton.frame.size.width-bolder
